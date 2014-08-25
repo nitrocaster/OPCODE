@@ -1,0 +1,20 @@
+# exclude all dot files except .gitignore
+.*
+!.gitignore
+
+# exclude binaries and temporary files
+Debug/
+Release/
+ipch/
+
+# User-specific files
+*.suo
+*.sdf
+*.opensdf
+*.user
+*.vcxproj.filters
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx

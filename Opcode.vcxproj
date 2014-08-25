@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{C5B7BBAA-CECF-409C-8B49-CE856C60261D}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;OPCODE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\Opcode.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <AdditionalOptions> /QIfist </AdditionalOptions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\Opcode.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x040c</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\Opcode.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>Debug\Opcode_D.dll</OutputFile>
+      <ImportLibrary>.\Debug\Opcode_D.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;OPCODE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\Opcode.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <AdditionalOptions> /QIfist </AdditionalOptions>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\Opcode.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x040c</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\Opcode.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OutputFile>.\Release\Opcode.dll</OutputFile>
+      <ImportLibrary>.\Release\Opcode.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Ice\IceAABB.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Ice\IceContainer.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Ice\IceHPoint.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Ice\IceIndexedTriangle.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Ice\IceMatrix3x3.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Ice\IceMatrix4x4.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Ice\IceOBB.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Ice\IcePlane.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Ice\IcePoint.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Ice\IceRandom.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Ice\IceRay.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Ice\IceRevisitedRadix.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Ice\IceSegment.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Ice\IceTriangle.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Ice\IceUtils.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="Opcode.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="OPC_AABBCollider.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="OPC_AABBTree.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="OPC_BaseModel.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="OPC_BoxPruning.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="OPC_Collider.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="OPC_Common.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="OPC_HybridModel.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="OPC_LSSCollider.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="OPC_MeshInterface.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="OPC_Model.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="OPC_OBBCollider.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="OPC_OptimizedTree.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="OPC_Picking.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="OPC_PlanesCollider.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="OPC_RayCollider.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="OPC_SphereCollider.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="OPC_SweepAndPrune.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="OPC_TreeBuilders.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="OPC_TreeCollider.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="OPC_VolumeCollider.cpp">
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> /QIfist   /QIfist </AdditionalOptions>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ice\IceAABB.h" />
+    <ClInclude Include="Ice\IceAxes.h" />
+    <ClInclude Include="Ice\IceBoundingSphere.h" />
+    <ClInclude Include="Ice\IceContainer.h" />
+    <ClInclude Include="Ice\IceFPU.h" />
+    <ClInclude Include="Ice\IceHPoint.h" />
+    <ClInclude Include="Ice\IceIndexedTriangle.h" />
+    <ClInclude Include="Ice\IceLSS.h" />
+    <ClInclude Include="Ice\IceMatrix3x3.h" />
+    <ClInclude Include="Ice\IceMatrix4x4.h" />
+    <ClInclude Include="Ice\IceMemoryMacros.h" />
+    <ClInclude Include="Ice\IceOBB.h" />
+    <ClInclude Include="Ice\IcePairs.h" />
+    <ClInclude Include="Ice\IcePlane.h" />
+    <ClInclude Include="Ice\IcePoint.h" />
+    <ClInclude Include="Ice\IcePreprocessor.h" />
+    <ClInclude Include="Ice\IceRandom.h" />
+    <ClInclude Include="Ice\IceRay.h" />
+    <ClInclude Include="Ice\IceRevisitedRadix.h" />
+    <ClInclude Include="Ice\IceSegment.h" />
+    <ClInclude Include="Ice\IceTriangle.h" />
+    <ClInclude Include="Ice\IceTrilist.h" />
+    <ClInclude Include="Ice\IceTypes.h" />
+    <ClInclude Include="Ice\IceUtils.h" />
+    <ClInclude Include="Opcode.h" />
+    <ClInclude Include="OPC_AABBCollider.h" />
+    <ClInclude Include="OPC_AABBTree.h" />
+    <ClInclude Include="OPC_BaseModel.h" />
+    <ClInclude Include="OPC_BoxBoxOverlap.h" />
+    <ClInclude Include="OPC_BoxPruning.h" />
+    <ClInclude Include="OPC_Collider.h" />
+    <ClInclude Include="OPC_Common.h" />
+    <ClInclude Include="OPC_HybridModel.h" />
+    <ClInclude Include="OPC_IceHook.h" />
+    <ClInclude Include="OPC_LSSAABBOverlap.h" />
+    <ClInclude Include="OPC_LSSCollider.h" />
+    <ClInclude Include="OPC_LSSTriOverlap.h" />
+    <ClInclude Include="OPC_MeshInterface.h" />
+    <ClInclude Include="OPC_Model.h" />
+    <ClInclude Include="OPC_OBBCollider.h" />
+    <ClInclude Include="OPC_OptimizedTree.h" />
+    <ClInclude Include="OPC_Picking.h" />
+    <ClInclude Include="OPC_PlanesAABBOverlap.h" />
+    <ClInclude Include="OPC_PlanesCollider.h" />
+    <ClInclude Include="OPC_PlanesTriOverlap.h" />
+    <ClInclude Include="OPC_RayAABBOverlap.h" />
+    <ClInclude Include="OPC_RayCollider.h" />
+    <ClInclude Include="OPC_RayTriOverlap.h" />
+    <ClInclude Include="OPC_Settings.h" />
+    <ClInclude Include="OPC_SphereAABBOverlap.h" />
+    <ClInclude Include="OPC_SphereCollider.h" />
+    <ClInclude Include="OPC_SphereTriOverlap.h" />
+    <ClInclude Include="OPC_SweepAndPrune.h" />
+    <ClInclude Include="OPC_TreeBuilders.h" />
+    <ClInclude Include="OPC_TreeCollider.h" />
+    <ClInclude Include="OPC_TriBoxOverlap.h" />
+    <ClInclude Include="OPC_TriTriOverlap.h" />
+    <ClInclude Include="OPC_VolumeCollider.h" />
+    <ClInclude Include="StdAfx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
